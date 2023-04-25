@@ -1,3 +1,24 @@
-<p>register works!</p>
-<a href="/login">Back to Login
-</a>
+<div class="form-wrapper">
+    <h1>Register</h1>
+    <form [formGroup]="registerForm" action="" (ngSubmit)="onSubmit()">
+  
+        <mat-form-field appearance="outline" >
+          <mat-label>Email</mat-label>
+          <input required autocomplete="none" type="email"  matInput formControlName="email">
+          <mat-hint *ngIf="email?.errors?.['required'] && registerForm.touched" >Bitte gib eine gültige Email an.</mat-hint>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Passwort</mat-label>
+          <input required type="password" autocomplete="none" matInput placeholder="Passwort" formControlName="password">
+          <mat-hint *ngIf="password?.errors?.['required'] && registerForm.touched" >Bitte gib ein Passwort an.</mat-hint>
+        </mat-form-field>
+  
+      <button mat-flat-button color="accent">Einloggen</button>
+
+    </form>
+    <p>Hier entlang es zum <a href="/login">Login</a>.</p>
+
+  </div>
+  
+  

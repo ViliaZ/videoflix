@@ -1,6 +1,6 @@
-<div class="login-wrapper">
+<div class="form-wrapper">
   <h1>Login</h1>
-  <form [formGroup]="loginForm" action="">
+  <form [formGroup]="loginForm" action="" (ngSubmit)="onSubmit()">
 
       <mat-form-field appearance="outline" >
         <mat-label>Email</mat-label>
@@ -16,7 +16,9 @@
 
     <button mat-flat-button color="accent">Einloggen</button>
 
-    <p>Neu bei Videoflix? <a href="/register">Jetzt registrieren</a></p>
   </form>
+  <p>Neu bei Videoflix? <a href="/register">Jetzt registrieren</a></p>
+  <p>Passwort vergessen? <a href="/register">Per Email zurücksetzen.</a></p>
+
 </div>
 

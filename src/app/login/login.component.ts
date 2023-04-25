@@ -22,4 +22,8 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
+
+  onSubmit(){
+    console.log('submit form', this.loginForm)
+  }
 }
