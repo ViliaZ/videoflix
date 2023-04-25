@@ -1,3 +1,4 @@
+@import '../../styles/variables';
 
 :host {
   height: 100%;
@@ -7,7 +8,7 @@
   align-items: center;
   justify-content: center;
   background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/efb4855d-e702-43e5-9997-bba0154152e0/6de2cbe0-421b-408c-b6ca-355963dc4e27/DE-de-20230417-popsignuptwoweeks-perspective_alpha_website_large.jpg");
-  color: white;
+  color: $txt-bright;
 }
 
 

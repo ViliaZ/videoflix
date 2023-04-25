@@ -3,6 +3,13 @@
     <form [formGroup]="registerForm" action="" (ngSubmit)="onSubmit()">
   
         <mat-form-field appearance="outline" >
+            <mat-label>Benutzername</mat-label>
+            <input required  matInput formControlName="name">
+            <mat-hint *ngIf="name?.errors?.['required'] && registerForm.touched" >Name ist erforderlich</mat-hint>
+            <mat-hint *ngIf="name?.errors?.['minLength']" >Mindestens 3 Zeichen</mat-hint>
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" >
           <mat-label>Email</mat-label>
           <input required autocomplete="none" type="email"  matInput formControlName="email">
           <mat-hint *ngIf="email?.errors?.['required'] && registerForm.touched" >Bitte gib eine gültige Email an.</mat-hint>

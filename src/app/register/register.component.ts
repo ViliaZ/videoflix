@@ -8,12 +8,16 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerForm = this.fb.group({
-    email: ['', Validators.required, Validators.email],
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required, Validators.email],
   });
 
   get email() {
     return this.registerForm.get('email');
+  }
+  get name() {
+    return this.registerForm.get('name');
   }
   get password() {
     return this.registerForm.get('password');
@@ -24,6 +28,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log('submit RegisterForm');
+    console.log('submit RegisterForm', this.registerForm);
   }
 }
