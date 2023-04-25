@@ -1,0 +1,22 @@
+<div class="login-wrapper">
+  <h1>Login</h1>
+  <form [formGroup]="loginForm" action="">
+
+      <mat-form-field appearance="outline" >
+        <mat-label>Email</mat-label>
+        <input required autocomplete="none" type="email"  matInput formControlName="email">
+        <mat-hint *ngIf="email?.errors?.['required'] && loginForm.touched" >Bitte gib eine gültige Email an.</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Passwort</mat-label>
+        <input required type="password" autocomplete="none" matInput placeholder="Passwort" formControlName="password">
+        <mat-hint *ngIf="password?.errors?.['required'] && loginForm.touched" >Bitte gib ein Passwort an.</mat-hint>
+      </mat-form-field>
+
+    <button mat-flat-button color="accent">Einloggen</button>
+
+    <p>Neu bei Videoflix? <a href="/register">Jetzt registrieren</a></p>
+  </form>
+</div>
+
