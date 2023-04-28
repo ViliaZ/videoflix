@@ -1,1 +1,19 @@
-<p>nav works!</p>
+<mat-toolbar>
+    <div class="gap-2">
+        <span [routerLink]="['explore']" class="logo">Videoflix</span>
+        <ng-container *ngIf="!router.url.includes('/login') && !router.url.includes('/register')">
+            <a [routerLink]="['explore']" >Entdecken</a>
+            <a [routerLink]="['mylist']" >Meine Liste</a>
+        </ng-container>
+    </div>
+    <ng-container *ngIf="!router.url.includes('/login') && !router.url.includes('/register')">
+        <div class="gap-2">
+            <button mat-icon-button>
+                <mat-icon>search</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>person</mat-icon>
+            </button>
+        </div>
+    </ng-container>
+</mat-toolbar>
