@@ -1,0 +1,11 @@
+
+@import 'variables';
+
+.gap-2{
+    gap: 2em;
+}
+
+.page-width{
+    padding-left: $pg-pagewidth;
+    padding-right: $pg-pagewidth;
+}

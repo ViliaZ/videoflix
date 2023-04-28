@@ -1,6 +1,7 @@
+@import "mixins";
+@import 'variables';
 
-
-// Form 
+// Form
 
 .mat-form-field-appearance-outline .mat-form-field-outline {
     background: white;
@@ -8,14 +9,25 @@
 }
 
 .mat-form-field-wrapper {
-   // padding-bottom: 6px;
+    // padding-bottom: 6px;
 }
 
 .mat-form-field {
     width: 100%;
-  }
+}
 
-.mat-hint{
+.mat-hint {
     color: $txt-bright;
 }
 
+.mat-toolbar {
+    @include center-all();
+    justify-content: space-between;
+    padding: unset!important; 
+    background-color: unset;
+
+    div{
+        display: flex;
+        gap: 1.2em; 
+    }
+}

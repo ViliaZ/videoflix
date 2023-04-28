@@ -1,14 +1,29 @@
+@import 'variables';
+
 *   {
     box-sizing: border-box;
+    color: $txt-bright;
 } 
 
 html,
 body {
-    height: 100%;
+    background-color: rgb(9, 9, 9); 
+    color: $txt-bright;
 }
+
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+a{
+    text-decoration: none;
+    color: $txt-bright;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
 
   
